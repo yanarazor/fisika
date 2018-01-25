@@ -4,13 +4,20 @@ class Emu
     public function getUrl($url,$apikey = "",$username = "",$password = "")
     {
         $url = str_replace("&amp;", '&', urldecode(trim($url)));
-         
+        $proxy = '192.168.0.3:3128';
+        $proxyauth = 'yana004:sadisudirman2016';
+
 		$header = array('Accept: '=>'application/json',
             'X-API-KEY' => $apikey);
         $cookie_fname = tempnam("/tmp", "CURLCOOKIE");
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.215 Safari/535.1");
         curl_setopt($ch, CURLOPT_URL, $url);
+        
+        //curl_setopt($ch, CURLOPT_PROXY, $proxy);     // PROXY details with port
+        //curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);   // Use if proxy have username and password
+        //curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS5); // If expected to call with specific PROXY type
+
         curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
         curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
 		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");

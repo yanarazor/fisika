@@ -6,11 +6,11 @@ $convert = new convert();
   <!-- Start main-content -->
   <div class="main-content">
     <!-- Section: home -->
-    <section id="home" class="divider">
-      <div class="container-fluid p-0">
+    <section id="home">
+      <div class="container p-0">
 
         <!-- START REVOLUTION SLIDER 5.0.7 -->
-        <div id="rev_slider_home_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="news-gallery34" style="margin:0px auto;background-color:#ffffff;padding:0px;margin-top:0px;margin-bottom:0px;">
+        <div id="rev_slider_home_wrapper" class="rev_slider_wrapper" data-alias="news-gallery34" style="margin:100px auto;padding-left:150px;padding-right:150px;margin-top:0px;margin-bottom:0px;height: 430px; background: #081744 url(<?php echo base_url() ?>assets/images/bg_panel.jpg) repeat-y center 0;">
           <!-- START REVOLUTION SLIDER 5.0.7 fullwidth mode -->
           <div id="rev_slider_home" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
             <ul>
@@ -30,12 +30,12 @@ $convert = new convert();
                       <!-- LAYER NR. 1 -->
                       <div class="tp-caption tp-resizeme text-black-333 rs-parallaxlevel-0" 
                         id="slide-2-layer-<?php echo $i; ?>" 
-                        data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']" 
-                        data-y="['top','top','top','top']" data-voffset="['140','100','70','90']"
-                        data-fontsize="['44','36','30','18']"
+                        data-x="['left','left','left','left']" data-hoffset="['10','50','50','30']" 
+                        data-y="['top','top','top','top']" data-voffset="['200','20','70','90']"
+                        data-fontsize="['30','26','20','18']"
                         data-lineheight="['70','60','50','45']"
-                        data-fontweight="['800','700','700','700']"
-                        data-width="['700','650','600','420']"
+                        data-fontweight="['500','700','700','700']"
+                        data-width="['900','650','430','420']"
                         data-height="none"
                         data-whitespace="normal"
                         data-transform_idle="o:1;"
@@ -47,32 +47,9 @@ $convert = new convert();
                         data-splitin="none"
                         data-splitout="none"
                         data-responsive_offset="on"
-                        style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;"><span class="text-theme-colored2"><?php echo $record->{"title".$language}; ?> </span>
+                        style="z-index: 6; min-width: 430px; max-width: 901px; background-color: transparent; padding-left: 10px; white-space: normal;"><a href="<?php echo base_url(); ?>news/read/<?php echo $record->seo_title; ?>"<span class="text-theme-colored2"><?php echo $record->{"title".$language}; ?></a> </span>
                       </div>
-                     
-                      <!-- LAYER NR. 3 -->
-                      <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0" 
-                        id="slide-1-layer-<?php echo $i; ?>" 
-                        data-x="['left','left','left','left']" data-hoffset="['53','53','53','30']" 
-                        data-y="['top','top','top','top']" data-voffset="['380','290','260','260']" 
-                        data-fontsize="['18','18','16','16']"
-                        data-lineheight="['30','30','30','30']"
-                        data-fontweight="['600','600','600','600']"
-                        data-width="['700','650','600','420']"
-                        data-height="none"
-                        data-whitespace="nowrap"
-                        data-transform_idle="o:1;"
-                        data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;" 
-                        data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;" 
-                        data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
-                        data-mask_out="x:0;y:0;s:inherit;e:inherit;" 
-                        data-start="1000" 
-                        data-splitin="none" 
-                        data-splitout="none" 
-                        data-responsive_offset="on" 
-                        style="z-index: 7; white-space: nowrap;">
-                        <a href="<?php echo base_url(); ?>news/read/<?php echo $record->seo_title; ?>" class="btn btn-dark btn-theme-colored2 btn-xl mr-10"><?php echo lang('bf_readmore'); ?></a> 
-                      </div>
+                      
                     </li>
 
                <?php  
@@ -133,7 +110,7 @@ $convert = new convert();
                     style: 'hebe',
                     tmp: '<span class="tp-bullet-image"></span>',
                     hide_onmobile:true,
-                    hide_under:600,
+                    hide_under:430,
                     hide_onleave:true,
                     hide_delay:200,
                     hide_delay_mobile:1200,
@@ -152,7 +129,7 @@ $convert = new convert();
                 },
                 responsiveLevels:[1240,1024,778,480],
                 gridwidth:[1240,1024,778,480],
-                gridheight:[600,550,500,450],
+                gridheight:[430,550,500,430],
                 lazyType:"none",
                 parallax: {
                   type:"scroll",
@@ -185,105 +162,26 @@ $convert = new convert();
       </div>
     </section>
 
-   
-    <!-- Section: Services -->
-    <section id="services">
-      <div class="container pb-10">
-        <div class="section-title mb-30">
+   <section id="blog">
+      <div class="container pb-sm-40">
+        <div class="section-content">       
           <div class="row">
-            <div class="col-md-6 col-md-offset-3  text-center">
-              <h2 class="title text-uppercase"><?php echo lang('bf_groupresearch_group'); ?> <span class="text-theme-colored2"><?php echo lang('bf_groupresearch_research'); ?></span></h2>
-              <p><?php echo lang('bf_groupresearchdesc'); ?></p>
+            <div class="col-md-4">
               <div class="line-bottom-centered"></div>
+              <h3 class="title text-uppercase"><span class="text-theme-colored2"><?php echo lang('bf_pressrelease'); ?></span></h3>
             </div>
-          </div>
-        </div>
-        <div class="section-content">
-          <div class="row">
-          <div class="owl-carousel-3col" data-nav="true">
-             <?php
-              $has_keltian  = isset($recordkeltians) && is_array($recordkeltians) && count($recordkeltians);
-              if ($has_keltian) :
-                foreach ($recordkeltians as $record) :
-                $photo = $record->picture != "" ? $record->picture : "imagenoavailable.png";
-              ?>
-                <a href="<?php echo base_url(); ?>pages/keltian/<?php echo $record->seo_title; ?>"> 
-                   <div class="col-xs-12">
-                      <div class="service-box border-1px hover-box-shadow p-30 mb-20">
-                        <h4 class="media-heading heading font-weight-600"><?php echo $record->{"title".$language}; ?></h4>
-                        <p><?php echo $convert->countwordscustom($record->{"content".$language},100); ?></p>
-                      </div>
-                    </div>
-                </a>
-               <?php  
-                endforeach;
-              endif;
-              ?>
-             
-          </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- Section About -->
-    <section id="about" class="bg-silver-light">
-      <div class="container">
-        <div class="section-content">
-          <div class="row">
-            <div class="col-md-6">
-              <h3 class="font-32 font-weight-600 mt-0"><?php echo isset($recordvideo->judul) ? $recordvideo->judul : ""; ?></h3>
-              <p class="font-16 mt-15 mb-15"><?php echo isset($recordvideo->keterangan) ? $recordvideo->keterangan : ""; ?></p>
-              <h5><span class="text-theme-colored2">Galleri Lainnya : </span></h5>
-
-               <div class="row">
-                <div id="grid" class="gallery-isotope default-animation-effect grid-2 gutter clearfix" style="position: relative; height: 640.484px; margin-bottom: 0px;">
-                  <!-- Portfolio Item Start -->
-                  <?php
-                  $has_galleri  = isset($recordgallerys) && is_array($recordgallerys) && count($recordgallerys);
-                  if ($has_galleri) :
-                    foreach ($recordgallerys as $record) :
-                    $photo = $record->filename != "" ? $this->settings_lib->item('site.urlimggallery').$record->filename : "http://placehold.it/450x250";
-                  ?>
-                  <div class="gallery-item photography col-md-12">
-                    <div class="thumb">
-                      <img class="img-fullwidth" src="<?php echo $photo; ?>" alt="project">
-                      <div class="overlay-shade"></div>
-                      <div class="icons-holder">
-                        <div class="icons-holder-inner">
-                          <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
-                            <a class="popup-youtube" href="<?php echo $record->link; ?>"><i class="fa fa-youtube-play"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <?php  
-                    endforeach;
-                  endif;
-                  ?>
-                  <!-- Portfolio Item End -->
-                </div>
-                </div>
+            <div class="col-md-4">
+              <div class="line-bottom-centered"></div>
+              <h3 class="title text-uppercase"><span class="text-theme-colored2"><?php echo lang('bf_news'); ?></span></h3>
             </div>
-            <div class="col-md-6">
-              <div class="box-hover-effect about-video mt-sm-30">
-                <div class="effect-wrapper">
-                  <div class="thumb">
-                    <img class="img-fullwidth" src="<?php echo $this->settings_lib->item('site.urlimggallery'); ?><?php echo isset($recordvideo->filename) ? $recordvideo->filename : ""; ?>" alt="project">
-                  </div>
-                  <div class="video-button"></div>
-                  <a class="hover-link" data-lightbox-gallery="youtube-video" href="<?php echo isset($recordvideo->link) ? $recordvideo->link : ""; ?>" title="<?php echo isset($recordvideo->judul) ? $recordvideo->judul : ""; ?>"></a>
-                </div>
-              </div>
+            <div class="col-md-4">
+            sdf
             </div>
           </div>
         </div>
       </div>
-    </section>
-
+  </section>
+     
     <!-- Section: Team -->
     <section id="team">
       <div class="container">

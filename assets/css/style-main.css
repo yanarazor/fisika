@@ -2406,7 +2406,7 @@ body.container-970px .container {
 }
 .form-control {
   box-shadow: none;
-  height: 45px;
+  
   border: 1px solid #eeeeee;
 }
 label {
@@ -9406,7 +9406,7 @@ blockquote p {
   font-size: 14px;
 }
 .menuzord-menu > li {
-  padding: 24px 0;
+   
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 900px) {

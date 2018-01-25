@@ -50,7 +50,7 @@
               <div class="col-sm-7">
                 <h2 class="primary-font"><?php echo isset($recordpegawais->nama) ? $recordpegawais->nama : ""; ?></h2>
                 <p class="text-muted">
-                	<?php echo $recordpegawais->jabatan != "" and  isset($recordpegawais->jabatan) ? "Jabatan : ".$recordpegawais->jabatan."<br>" : ""; ?>
+                	<?php echo ($recordpegawais->jabatan != "" and  isset($recordpegawais->jabatan)) ? "Jabatan : ".$recordpegawais->jabatan."<br>" : ""; ?>
                   <?php echo isset($recordpegawais->jabatan_ft) ? "Fungsional : ".$recordpegawais->jabatan_ft : ""; ?>
                   <?php echo isset($recordpegawais->jabatan_u) ? "Fungsional : ".$recordpegawais->jabatan_u : ""; ?>
                 </p>

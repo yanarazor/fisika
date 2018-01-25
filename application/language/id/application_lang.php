@@ -65,7 +65,7 @@ $lang['bf_readnews'] = 'Baca Berita';
 $lang['bf_peneliti'] = 'Peneliti';
 $lang['bf_unggulan'] = 'Unggulan';
 $lang['bf_titlepenelitiunggulan'] = 'Peneliti unggulan Pusat Penelitian Fisika';
-
+$lang['bf_pressrelease'] = 'PRESS RELEASES';
 $lang['bf_lates'] = 'Berita';
 $lang['bf_newslates'] = 'Terbaru';
 
