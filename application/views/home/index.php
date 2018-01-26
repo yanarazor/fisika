@@ -162,135 +162,137 @@ $convert = new convert();
       </div>
     </section>
 
-   <section id="blog">
-      <div class="container pb-sm-40">
-        <div class="section-content">       
+  <div class="row">
+      <div class="container pb-sm-40">    
           <div class="row">
-            <div class="col-md-4">
-              <div class="line-bottom-centered"></div>
-              <h3 class="title text-uppercase"><span class="text-theme-colored2"><?php echo lang('bf_pressrelease'); ?></span></h3>
-            </div>
-            <div class="col-md-4">
-              <div class="line-bottom-centered"></div>
-              <h3 class="title text-uppercase"><span class="text-theme-colored2"><?php echo lang('bf_news'); ?></span></h3>
-            </div>
-            <div class="col-md-4">
-            sdf
-            </div>
-          </div>
-        </div>
-      </div>
-  </section>
-     
-    <!-- Section: Team -->
-    <section id="team">
-      <div class="container">
-        <div class="section-title mb-30">
-          <div class="row">
-            <div class="col-md-6 col-md-offset-3  text-center">
-              <h2 class="title text-uppercase"><?php echo lang('bf_peneliti'); ?> <span class="text-theme-colored2"><?php echo lang('bf_unggulan'); ?></span></h2>
-              <p><?php echo lang('bf_titlepenelitiunggulan'); ?></p>
-              <div class="line-bottom-centered"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="section-content">
-            <div class="row">
-              <?php
-                $has_recordpegawais = isset($recordpegawais) && is_array($recordpegawais) && count($recordpegawais);
-                if ($has_recordpegawais) :
-                  foreach ($recordpegawais as $record) :
-              ?>
-              <div class="col-md-3">
-                <div class="team-members-stye2 text-center maxwidth400">
-                  <div class="team-thumb">
-                    <a href="<?php echo base_url(); ?>emp/view/<?php echo $record->nip; ?>/<?php echo $convert->SeoUrl($record->nama); ?>">
-                      <div class="team-thumb-img">
-                        <img src="<?php echo $record->foto; ?>" alt="" class="img-fullwidth">
+            <div class="col-md-9">
+                <div class="col-md-6">
+                  <h4 class="text-uppercase title"><?php echo lang('bf_pressrelease'); ?></h4>
+                  <div class="line-bottom-theme-colored2"></div>
+                    <div class="">
+                      <?php
+                            $has_beritaterbaru  = isset($recordevents) && is_array($recordevents) && count($recordevents);
+                          if ($has_beritaterbaru) :
+                            $no = 1;
+                            foreach ($recordevents as $record) :
+                            $photo = $record->picture != "" ? $this->settings_lib->item('site.urlimggallery').$record->picture : "http://placehold.it/185x145";
+                            if($no<3){
+                         ?>
+                                <span><?php echo $convert->fmtDate($record->created_date,"dd month yyyy");?></span>
+                                <h5 class="entry-title mt-0 mb-5"><a href="#"><?php echo $record->{"title".$language}; ?></a></h5>
+                                <article class="post media-post clearfix pb-0 mb-10">
+                                  <a class="post-thumb" href="<?php echo base_url(); ?>news/read/<?php echo $record->seo_title; ?>"><img src="<?php echo $photo; ?>" alt=""></a>
+                                  <div class="post-right">
+                                    <p><?php echo $convert->countwordscustom($record->{"content".$language},200); ?></p>
+                                  </div>
+                                </article>
+                                <hr>
+                              <?php
+                              $no++;
+                            }else{
+                            ?>
+                                <span class="mt-10"><?php echo $convert->fmtDate($record->created_date,"dd month yyyy");?></span>
+                                <h5 class="entry-title mt-0 mb-20"><a href="<?php echo base_url(); ?>news/read/<?php echo $record->seo_title; ?>"><?php echo $record->{"title".$language}; ?></a></h5>
+                                 
+                            <?php
+                            }
+                          endforeach;
+                        endif;
+                        ?>
                       </div>
-                    </a>
-                    <ul class="styled-icons icon-sm bg-theme-colored2 text-centered pt-5">
-                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                      <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                    </ul>
-                  </div>
-                  <div class="team-bottom-part bg-silver-light border-bottom-theme-color-4px p-15">
-                    <h4 class="text-uppercase m-0 pb-5"><a href="<?php echo base_url(); ?>emp/view/<?php echo $record->nip; ?>/<?php echo $convert->SeoUrl($record->nama); ?>"><?php echo $record->nama; ?></a></h4>
-                    <h6 class="font-13 text-gray mt-0"><?php echo $record->jabatan_ft; ?></h6>
-                  </div>
                 </div>
-              </div>
-              <?php
-                  endforeach;
-                endif;
-              ?>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section: blog -->
-    <section id="blog">
-      <div class="container pb-sm-40">
-        <div class="section-content">       
-          <div class="row">
-            <div class="col-md-12">
-              <h2 class="text-uppercase title"><?php echo lang('bf_lates'); ?> <span class="text-theme-colored2"><?php echo lang('bf_newslates'); ?></span></h2>
-              <div class="line-bottom-theme-colored2"></div>
-              <div class="owl-carousel-3col" data-nav="true">
-                <?php
-                    $has_beritaterbaru  = isset($recordterbarus) && is_array($recordterbarus) && count($recordterbarus);
-                  if ($has_beritaterbaru) :
-                    foreach ($recordterbarus as $record) :
-                    $photo = $record->picture != "" ? $this->settings_lib->item('site.urlimggallery').$record->picture : "http://placehold.it/370x245";
-                  ?>
-                <div class="item">
-                  <article class="post">
-                    <a href="<?php echo base_url(); ?>news/read/<?php echo $record->seo_title; ?>">
-                      <div class="post-thumb position-relative">
-                        <img src="<?php echo $photo; ?>" class="img-fullwidth" alt="">
-                        <span><?php echo $convert->fmtDate($record->created_date,"dd month yyyy");?></span>
+                <div class="col-md-6">
+                  <h4 class="text-uppercase title"><?php echo lang('bf_pressrelease'); ?></h4>
+                  <div class="line-bottom-theme-colored2"></div>
+                    <div class="">
+                      <?php
+                            $has_beritaterbaru  = isset($recordterbarus) && is_array($recordterbarus) && count($recordterbarus);
+                          if ($has_beritaterbaru) :
+                            $no = 1;
+                            foreach ($recordterbarus as $record) :
+                            $photo = $record->picture != "" ? $this->settings_lib->item('site.urlimggallery').$record->picture : "http://placehold.it/185x145";
+                            if($no<3){
+                         ?>
+                                <span><?php echo $convert->fmtDate($record->created_date,"dd month yyyy");?></span>
+                                <h5 class="entry-title mt-0 mb-5"><a href="#"><?php echo $record->{"title".$language}; ?></a></h5>
+                                <article class="post media-post clearfix pb-0 mb-10">
+                                  <a class="post-thumb" href="<?php echo base_url(); ?>news/read/<?php echo $record->seo_title; ?>"><img src="<?php echo $photo; ?>" alt=""></a>
+                                  <div class="post-right">
+                                    <p><?php echo $convert->countwordscustom($record->{"content".$language},200); ?></p>
+                                  </div>
+                                </article>
+                                <hr>
+                              <?php
+                              $no++;
+                            }else{
+                            ?>
+                                <span class="mt-10"><?php echo $convert->fmtDate($record->created_date,"dd month yyyy");?></span>
+                                <h5 class="entry-title mt-0 mb-20"><a href="<?php echo base_url(); ?>news/read/<?php echo $record->seo_title; ?>"><?php echo $record->{"title".$language}; ?></a></h5>
+                                 
+                            <?php
+                            }
+                          endforeach;
+                        endif;
+                        ?>
                       </div>
-                    </a>
-                    <div class="post-description border-1px p-20">
-                      <p class="mb-20"><?php echo $record->{"title".$language}; ?></p>
-                      <a href="<?php echo base_url(); ?>news/read/<?php echo $record->seo_title; ?>" class="blog-read-more text-theme-colored2 font-15 text-gray-darkgray"><?php echo lang('bf_readmore'); ?></a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="col-md-12 mt-10 pt-0 p-0 bg-silver-light ">
+                    <h4 class="text-centered p-10 mt-0 bg-theme-colored2"><?php echo lang('bf_kelkeltian'); ?></h4>
+                        <div class="p-20">
+                            <?php
+                              $has_keltian  = isset($recordkeltians) && is_array($recordkeltians) && count($recordkeltians);
+                              if ($has_keltian) :
+                                foreach ($recordkeltians as $record) :
+                                $photo = $record->picture != "" ? $this->settings_lib->item('site.urlimggallery').$record->picture :   "http://placehold.it/350x235";
+                              ?>
+                                  <div class="item">
+                                    <img src="<?php echo $photo; ?>" alt="">
+                                    <h4 class="title"><a href="<?php echo base_url(); ?>pages/keltian/<?php echo $record->seo_title; ?>"><?php echo $record->{"title".$language}; ?></a></h4>
+                                    <p><?php echo $convert->countwordscustom($record->{"content".$language},100); ?></p>
+                                  </div>
+                             <?php  
+                              endforeach;
+                            endif;
+                            ?>
+                        </div>
+                </div>
+
+                <div class="col-md-12 mt-10 pt-0 p-0 bg-silver-light ">
+                  <h4 class="text-centered p-10 mt-0 bg-theme-colored2"><?php echo lang('bf_events'); ?></h4>
+                      <div class="p-20">
+                          <?php
+                            $has_keltian  = isset($recordeventones) && is_array($recordeventones) && count($recordeventones);
+                            if ($has_keltian) :
+                              foreach ($recordeventones as $record) :
+                              $photo = $record->picture != "" ? $this->settings_lib->item('site.urlimggallery').$record->picture :   "http://placehold.it/350x235";
+                            ?>
+                                <div class="item">
+                                  <span class="mt-10"><?php echo $convert->fmtDate($record->created_date,"dd month yyyy");?></span>
+                                  <p><a href="<?php echo base_url(); ?>pages/keltian/<?php echo $record->seo_title; ?>"><?php echo $record->{"title".$language}; ?></a></p>
+                                </div>
+                           <?php  
+                            endforeach;
+                          endif;
+                          ?>
+                      </div>
+                </div>
+
+                <div class="col-md-12 mt-10 pt-0 p-0">
+                    <div class="p-0">
+                      <a href="#"><img src="<?php echo base_url(); ?>assets/images/facebook.png" class="mb-10"></a>
+                      <a href="#"><img src="<?php echo base_url(); ?>assets/images/twitter.gif" class="mb-10"></a>
+                      <a href="#"><img src="<?php echo base_url(); ?>assets/images/youtube.gif" class="mb-10"></a>
                     </div>
-                  </article>
                 </div>
-                <?php
-                  endforeach;
-                endif;
-                ?>
-              </div>
-
             </div>
-          </div>
-        </div>
       </div>
-    </section>
-
-     <!-- Divider: Reservation Form -->
-    <section data-bg-img=" " class="layer-overlay overlay-theme-colored-9">
-      <div class="container-fluid pt-0 pb-0">
-        <div class="row equal-height">
-          <div class="col-sm-6 col-md-6 pull-right xs-pull-none">
-            <div class="pt-70 pb-30 pl-10 pr-10 p-md-10">
-              <div class="mt-sm-40">
-                 <center><h2 class="text-uppercase title"><span class="text-theme-colored2">Birokrasi tanpa korupsi adalah harga mati </span></h2></center>
-                <!-- Reservation Form Validation Start -->
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-6 p-0 bg-img-cover" data-bg-img="<?php echo base_url(); ?>assets/images/zi.jpeg">
-          </div>
-        </div>
       </div>
-    </section>
+  </div>
+   
+    <!-- Section: blog -->
+     
   </div>
   <!-- end main-content -->
   <!-- Footer -->
