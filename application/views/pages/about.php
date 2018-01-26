@@ -29,7 +29,7 @@
     <section>
       <div class="container">
         <div class="row">
-          <div class="col-md-8 blog-pull-right">
+          <div class="col-md-8">
             <div class="single-service">
               <h3 class="text-theme-colored line-bottom-theme-colored2 text-theme-colored"><?php echo $recordberita->{"title".$language}; ?></h3>
               <?php
@@ -66,8 +66,8 @@
             </div>
             </div>
           </div>
-          <div class="col-sm-12 col-md-4">
-            <div class="sidebar sidebar-left mt-sm-30 ml-40">
+          <div class="col-sm-12 col-md-4 blog-pull-right">
+            <div class="sidebar sidebar-right mt-sm-30 ml-40">
               <div class="widget">
                 <div class="services-list">
                   <ul class="list list-border mt-0">

@@ -4501,6 +4501,7 @@ ul.product_list_widget li .star-rating {
  * blog.less
  * -----------------------------------------------
 */
+
 .blog-posts .post {
   position: relative;
 }
@@ -4565,8 +4566,11 @@ ul.product_list_widget li .star-rating {
 .owl-item .post-thumb img{
   min-height: 245px;
 }
+.media-post{
+  min-height: 270px;
+}
 .media-post .post-thumb img{
-  width: 80px;
+  width: 150px;
 }
 .blog-posts .post .post-thumb .owl-dots .owl-dot span {
   border-radius: 50%;
@@ -8745,7 +8749,7 @@ blockquote p {
   color: #fff;
   font-weight: 600;
 }
-.services-list li.active::after {
+.services-list li.active::before {
   color: #fff;
   content: "\f061";
   font-family: "FontAwesome";

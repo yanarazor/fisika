@@ -73,7 +73,7 @@ class Home extends Front_Controller
         $ecordheadline = $this->berita_model->limit(5)->find_headline();
         Template::set('ecordheadline', $ecordheadline);
 
-        $recordkeltians = $this->berita_model->find_keltian();
+        $recordkeltians = $this->berita_model->limit(1)->find_keltian();
         Template::set('recordkeltians', $recordkeltians);
         
         //pegawai

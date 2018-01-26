@@ -66,8 +66,14 @@ class Front_Controller extends Base_Controller
         Template::set('recordterbarus', $recordterbarus);
 
         $this->load->model('berita/berita_model');
+        $this->berita_model->order_by("id","asc");
         $recordevents = $this->berita_model->limit(5)->find_all("3");
         Template::set('recordevents', $recordevents);
+
+        $this->load->model('berita/berita_model');
+        $this->berita_model->order_by("id","desc");
+        $recordeventones = $this->berita_model->limit(2)->find_all("3");
+        Template::set('recordeventones', $recordeventones);
     }//end __construct()
 
     //--------------------------------------------------------------------

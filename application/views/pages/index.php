@@ -26,71 +26,121 @@
     <section>
       <div class="container">
         <div class="row">
-          <div class="col-md-8 blog-pull-right">
+          <div class="col-md-8 blog-pull-left">
             <div class="single-service">
               <h3 class="text-theme-colored line-bottom-theme-colored2 text-theme-colored"><?php echo lang('bf_tentangkami'); ?></h3>
               <?php echo html_entity_decode($recordberita->{"content".$language}); ?>
               <div class="row">
-                <div class="col-md-6">
-                  <a href="<?php echo base_url(); ?>pages/about/sambutan-kapus">
-                    <blockquote class="theme-colored">
-                      <b><?php echo lang('bf_sambutankapus'); ?></b><p><?php echo lang('bf_sambutankapusdesc'); ?></p>
-                    </blockquote>
-                  </a>
+                <div class="col-md-6 mb-10">
+                    <a href="<?php echo base_url(); ?>pages/about/sambutan-kapus">
+                      <div class="col-md-12 service-box text-left p-10 mb-00 bg-silver-light hover-box-shadow">
+                          <div class="col-md-3 p-0">
+                            <img src="<?php echo base_url(); ?>assets/images/about_introduction.jpg"/>
+                          </div>
+                          <div class="col-md-9">
+                            <h4 class="media-heading heading font-weight-600 "><?php echo lang('bf_sambutankapus'); ?></h4>
+                              <p><?php echo lang('bf_sambutankapusdesc'); ?></p>
+                          </div>
+                      </div>
+                    </a>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6  mb-10">
                   <a href="<?php echo base_url(); ?>pages/about/visi-misi">
-                    <blockquote class="theme-colored">
-                      <b><?php echo lang('bf_visimisi'); ?></b><p><?php echo lang('bf_visimisidesc'); ?></p>
-                    </blockquote>
-                  </a>
+                  <div class="col-md-12 service-box text-left p-10  bg-silver-light hover-box-shadow">
+                      <div class="col-md-3 p-0">
+                        <img src="<?php echo base_url(); ?>assets/images/about_introduction.jpg"/>
+                      </div>
+                      <div class="col-md-9">
+                        <h4 class="media-heading heading font-weight-600"><?php echo lang('bf_visimisi'); ?></h4>
+                          <p><?php echo lang('bf_visimisidesc'); ?></p>
+                      </div>
+                  </div>
+                </a>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-6">
-                  <a href="<?php echo base_url(); ?>pages/about/statistik-satker">
-                    <blockquote class="gray">
-                      <b><?php echo lang('bf_statistiksatker'); ?></b><p><?php echo lang('bf_statistiksatkerdesc'); ?></p>
-                    </blockquote>
-                  </a>
+                <div class="col-md-6  mb-10">
+                    
+                    <a href="<?php echo base_url(); ?>pages/about/statistik-satker">
+                      <div class="col-md-12 service-box text-left p-10 mb-10 bg-silver-light hover-box-shadow">
+                          <div class="col-md-3 p-0">
+                            <img src="<?php echo base_url(); ?>assets/images/about_introduction.jpg"/>
+                          </div>
+                          <div class="col-md-9">
+                            <h4 class="media-heading heading font-weight-600"><?php echo lang('bf_statistiksatker'); ?></h4>
+                              <p><?php echo lang('bf_statistiksatkerdesc'); ?></p>
+                          </div>
+                      </div>
+                    </a>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6  mb-10">
                   <a href="<?php echo base_url(); ?>pages/laporan">
-                    <blockquote class="gray">
-                      <b><?php echo lang('bf_laporan'); ?></b><p><?php echo lang('bf_laporandesc'); ?></p>
-                    </blockquote>
-                  </a>
+                  <div class="col-md-12 service-box text-left p-10 bg-silver-light hover-box-shadow">
+                      <div class="col-md-3 p-0">
+                        <img src="<?php echo base_url(); ?>assets/images/about_introduction.jpg"/>
+                      </div>
+                      <div class="col-md-9">
+                        <h4 class="media-heading heading font-weight-600"><?php echo lang('bf_laporan'); ?></h4>
+                          <p><?php echo lang('bf_laporandesc'); ?></p>
+                      </div>
+                  </div>
+                </a>
                 </div>
               </div>
+
               <div class="row">
-                <div class="col-md-6">
-                  <a href="<?php echo base_url(); ?>pages/about/struktur-organisasi">
-                    <blockquote class="theme-colored">
-                      <b><?php echo lang('bf_strukturorganisasi'); ?></b><p><?php echo lang('bf_strukturorganisasidesc'); ?></p>
-                    </blockquote>
-                  </a>
+                <div class="col-md-6  mb-10">
+                    
+                    <a href="<?php echo base_url(); ?>pages/about/struktur-organisasi">
+                      <div class="col-md-12 service-box text-left p-10 mb-10 bg-silver-light hover-box-shadow">
+                          <div class="col-md-3 p-0">
+                            <img src="<?php echo base_url(); ?>assets/images/about_introduction.jpg"/>
+                          </div>
+                          <div class="col-md-9">
+                            <h4 class="media-heading heading font-weight-600"><?php echo lang('bf_strukturorganisasi'); ?></h4>
+                              <p><?php echo lang('bf_strukturorganisasidesc'); ?></p>
+                          </div>
+                      </div>
+                    </a>
                 </div>
-                <div class="col-md-6">
-                  <a href="<?php echo base_url(); ?>pages/about/sejarah">
-                    <blockquote class="theme-colored">
-                      <b><?php echo lang('bf_sejarah'); ?></b><p><?php echo lang('bf_sejarahdesc'); ?></p>
-                    </blockquote>
-                  </a>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6  mb-10">
                   <a href="<?php echo base_url(); ?>pages/contact">
-                    <blockquote class="gray bg-theme-colored">
-                      <b><?php echo lang('bf_kontakkami'); ?></b><p><?php echo lang('bf_kontakkamidesc'); ?></p>
-                    </blockquote>
-                  </a>
+                  <div class="col-md-12 service-box text-left p-10 bg-silver-light hover-box-shadow">
+                      <div class="col-md-3 p-0">
+                        <img src="<?php echo base_url(); ?>assets/images/about_introduction.jpg"/>
+                      </div>
+                      <div class="col-md-9">
+                        <h4 class="media-heading heading font-weight-600"><?php echo lang('bf_sejarah'); ?></h4>
+                          <p><?php echo lang('bf_sejarahdesc'); ?></p>
+                      </div>
+                  </div>
+                </a>
                 </div>
               </div>
+
+              <div class="row">
+                 
+                <div class="col-md-6  mb-10">
+                  <a href="<?php echo base_url(); ?>pages/contact">
+                  <div class="col-md-12 service-box text-left p-10 bg-silver-light hover-box-shadow">
+                      <div class="col-md-3 p-0">
+                        <img src="<?php echo base_url(); ?>assets/images/about_introduction.jpg"/>
+                      </div>
+                      <div class="col-md-9">
+                        <h4 class="media-heading heading font-weight-600"><?php echo lang('bf_kontakkami'); ?></h4>
+                          <p><?php echo lang('bf_kontakkamidesc'); ?></p>
+                      </div>
+                  </div>
+                </a>
+                </div>
+              </div>
+
+               
+                
             </div>
           </div>
           <div class="col-sm-12 col-md-4">
-            <div class="sidebar sidebar-left mt-sm-30 ml-40">
+            <div class="sidebar sidebar-right mt-sm-30 ml-40">
               <div class="widget">
                 <div class="services-list">
                   <ul class="list list-border mt-0">

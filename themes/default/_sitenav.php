@@ -21,7 +21,7 @@ $convert = new convert();
               <ul class="styled-icons icon-sm icon-theme-colored2 mt-5">
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube-square"></i></a></li>
                 <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
               </ul>
@@ -42,7 +42,7 @@ $convert = new convert();
           </div>
           <div class="col-md-2">
               <div class="pull-right">
-                <form class="mt-5 mb-0" role="form" action="<?php echo base_url()?>news" method="get">
+                <form class="mt-5 mb-0" id="searchform" role="form" action="<?php echo base_url()?>news" method="get">
                   <input type="text" value="<?php echo isset($key) ? $key : ""; ?>" name="key" placeholder="<?php echo lang('bf_keyword'); ?>" class="form-control search-input">
                   </form>
                 </div>
@@ -60,10 +60,12 @@ $convert = new convert();
           </div>
           <div class="col-xs-12 col-sm-12 col-md-9">
             <div class="row pull-right">
-              <ul class="menuzord-menu">
+              <nav id="menuzord" class="menuzord default theme-colored menuzord-responsive">
+              <ul class="menuzord-menu menuzord-indented scrollable">
                 <li class="<?php echo (isset($mainmenu) and $mainmenu =="about") ? "active" : "";?>"><a href="<?php echo base_url(); ?>pages"><?php echo lang('bf_tentangkami'); ?></a>
                 <li class="<?php echo (isset($mainmenu) and $mainmenu =="fasilitas") ? "active" : "";?>"><a href="<?php echo base_url(); ?>pages/fasilitas"><?php echo lang('bf_fasilitas'); ?></a></li>
                 <li class="<?php echo (isset($mainmenu) and $mainmenu =="news") ? "active" : "";?>"><a href="<?php echo base_url(); ?>news"><?php echo lang('bf_newsnmedia'); ?></a>
+                  <!-- 
                   <div class="megamenu megamenu-bg-img">
                     <div class="megamenu-row">
                       <div class="col7">
@@ -102,12 +104,14 @@ $convert = new convert();
                       </div>
                     </div>
                   </div>
+                  -->
                 </li>
                 <li><a href="#home"><?php echo lang('bf_layanan'); ?></a>
                 <li><a href="#home"><?php echo lang('bf_kelkeltian'); ?></a>
 
                 </li>
               </ul>
+              </nav>
             </div>
           </div>
         </div>
