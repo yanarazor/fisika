@@ -35,14 +35,17 @@
 				            <li><a href="<?php echo base_url();?>admin/content/berita"><i class="fa fa-circle-o"></i>Berita</a></li>
 				            <li><a href="<?php echo base_url();?>admin/content/informasi_publik"><i class="fa fa-circle-o"></i>Informasi Publik</a></li>
 				            <li><a href="<?php echo base_url();?>admin/content/galleri"><i class="fa fa-circle-o"></i>Galeri</a></li>
-				            <li><a href="<?php echo base_url();?>admin/content/product"><i class="fa fa-circle-o"></i>Product</a></li>
 				            <li><a href="<?php echo base_url();?>admin/content/pesan"><i class="fa fa-circle-o"></i>Pesan</a></li>
-				            <li><a href="<?php echo base_url();?>admin/content/buku"><i class="fa fa-circle-o"></i>Buku</a></li>
+                            <!--
+				            <li><a href="<?php echo base_url();?>admin/content/product"><i class="fa fa-circle-o"></i>Product</a></li>
+                            <li><a href="<?php echo base_url();?>admin/content/buku"><i class="fa fa-circle-o"></i>Buku</a></li>
 				            <li><a href="<?php echo base_url();?>admin/content/paten"><i class="fa fa-circle-o"></i>Paten</a></li>
 				            <li><a href="<?php echo base_url();?>admin/content/publikasi"><i class="fa fa-circle-o"></i>Publikasi</a></li>
                             <li><a href="<?php echo base_url();?>admin/masters/pegawai"><i class="fa fa-circle-o"></i>Pegawai</a></li>
+                            -->
                         </ul>
                     </li>
+                    <!--
                      <?php if ($this->auth->has_permission('Kegiatan.Masters.View')) : ?>
                         <li class="treeview <?php echo $mainmenu == 'masters' ? 'active' : '' ?>">
                           <a href="#">
@@ -56,7 +59,8 @@
                             <li><a href="<?php echo base_url();?>admin/masters/kegiatan"><i class="fa fa-circle-o"></i>Kegiatan Penelitian</a></li>
                           </ul>
                         </li>
-                         <?php endif; ?>      
+                         <?php endif; ?>   
+                    -->   
                      <?php if ($this->auth->has_permission('Site.Developer.View')) : ?>
                         <li class="treeview <?php echo $mainmenu == 'developer' ? 'active' : '' ?>">
                           <a href="#">

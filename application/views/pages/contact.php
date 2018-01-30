@@ -111,12 +111,7 @@
               <li><a href="#" data-bg-color="#4C75A3"><i class="fa fa-vk"></i></a></li>
             </ul>
 
-            <div class="icon-box media mb-15"> <a class="media-left pull-left flip mr-20" href="#"> <i class="pe-7s-map-2 text-theme-colored"></i></a>
-              <div class="media-body">
-                <h5 class="mt-0"><?php echo lang('bf_alamatkantor'); ?></h5>
-                <p>Komplek PUSPIPTEK Tangerang Selatan Banten 15314, Jalan Sangkuriang (Kompleks LIPI), Bandung</p>
-              </div>
-            </div>
+             
             <div class="icon-box media mb-15"> <a class="media-left pull-left flip mr-15" href="#"> <i class="pe-7s-call text-theme-colored"></i></a>
               <div class="media-body">
                 <h5 class="mt-0"><?php echo lang('bf_nomorkontak'); ?></h5>

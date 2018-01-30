@@ -26,7 +26,7 @@
     <section>
       <div class="container">
         <div class="row">
-          <div class="col-md-8 blog-pull-right">
+          <div class="col-md-8 blog-pull-left">
             <div class="single-service">
               <h3 class="text-theme-colored line-bottom-theme-colored2 text-theme-colored"><?php echo lang('bf_laporan'); ?></h3>
               <div class="tagline pt-10 mt-5">
@@ -43,7 +43,9 @@
                           <div class="gallery-item photography">
                             <div class="brochures-list">
                               <center>
-                                <a href="<?php echo $this->settings_lib->item('site.urlpublic'); ?><?php echo $record->file_name; ?>" target="_blank" class="<?php echo $record->id; ?> "><i class="fa fa-file-pdf-o" aria-hidden="true" style="font-size:48px;color:red"></i></a>
+                                <a href="<?php echo $this->settings_lib->item('site.urlpublic'); ?><?php echo $record->file_name; ?>" target="_blank" class="<?php echo $record->id; ?> ">
+                                  <img src="<?php echo $this->settings_lib->item('site.urlpublic'); ?><?php echo $record->cover; ?>"/>
+                                </a>
 
                               <a href="#" class="<?php echo $record->id; ?> "><h5 class="primary-font"><?php echo $record->nama; ?></h5></a>
                               <p class="text-muted">
